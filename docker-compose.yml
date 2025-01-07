@@ -1,10 +1,16 @@
+version: '3.8'
 services:
   db:
-    image: postgres
-    restart: always
-    ports:
-      - 5432:5432
+    build:
+      context: .
+      target: db
+    container_name: time-tracker-db
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: local
+    ports:
+      - '5432:5432'
+    volumes:
+      - /var/lib/postgresql/data # Persist data
+
