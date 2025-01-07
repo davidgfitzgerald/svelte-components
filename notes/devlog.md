@@ -41,3 +41,7 @@ Following https://eugenkiss.github.io/7guis/, I'm going to try and make some GUI
 
 Just used the inbuilt [lucia](https://lucia-auth.com/) authentication and customised the app such that all
 routes are protected with auth by default. Was relatively painless to adapt.
+
+## Tailwind
+
+Going to acquaint myself with a bit of tailwind and style the `/login` page

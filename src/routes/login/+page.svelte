@@ -4,17 +4,17 @@
 	let { form } = $props();
 </script>
 
-<h1>Login/Register</h1>
-<form method="post" action="?/login" use:enhance>
-	<label>
+<h1 class="py-16 flex justify-center text-6xl text-white">Login/Register</h1>
+<form class="py-16 rounded-xl flex justify-center items-center gap-x-4 font-medium" method="post" action="?/login" use:enhance>
+	<label class="p-2 focus:bg-sky-400 text-white">
 		Username
-		<input name="username" />
+		<input class="rounded-md text-black" name="username" />
 	</label>
-	<label>
+	<label class="p-2 focus:bg-sky-400 text-white">
 		Password
-		<input type="password" name="password" />
+		<input class="rounded-md text-black" type="password" name="password" />
 	</label>
-	<button>Login</button>
-	<button formaction="?/register">Register</button>
+	<button class="p-2 hover:bg-slate-500 text-white rounded-md">Login</button>
+	<button class="p-2 hover:bg-slate-500 text-white rounded-md" formaction="?/register">Register</button>
 </form>
-<p style="color: red">{form?.message ?? ''}</p>
+<p class="flex justify-center text-red-500 font-medium text-xl">{form?.message ?? ''}</p>
