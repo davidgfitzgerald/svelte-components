@@ -2,7 +2,7 @@
 	"name": "svelte-components",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev --open",
+		"dev": "vite dev --host --open",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
