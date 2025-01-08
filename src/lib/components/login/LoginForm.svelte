@@ -21,10 +21,15 @@
                         left-0
                         top-0
                         transition-all
+                        after:content-['*']
+                        after:ml-0.5
+                        after:text-red-500
+                        after:hidden
                         peer-placeholder-shown:text-black
                         peer-placeholder-shown:top-8
                         peer-placeholder-shown:left-3
                         focus:bg-sky-400
+                        peer-placeholder-shown:after:inline
                     "
                 >Username</label>
             </div>
@@ -43,10 +48,15 @@
                         left-0
                         top-0
                         transition-all
+                        after:content-['*']
+                        after:ml-0.5
+                        after:text-red-500
+                        after:hidden
                         peer-placeholder-shown:text-black
                         peer-placeholder-shown:top-8
                         peer-placeholder-shown:left-3
                         focus:bg-sky-400
+                        peer-placeholder-shown:after:inline
                     "
                 >Password</label>
             </div>
