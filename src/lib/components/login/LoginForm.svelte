@@ -4,30 +4,31 @@
 	let { form } = $props();
 </script>
 
-<div class="flex justify-center gap-4">
-    <form class="flex flex-col rounded-xl font-medium gap-8" method="post" action="?/login" use:enhance>
-        <div class="relative">
-            <input
-                id="username"
-                class="rounded-md text-black"
-                name="username"
-                placeholder=Username
-            />
-            <label for="username" class="p-2 focus:bg-sky-400"></label>
-        </div>
-        <div class="relative">
-            <input
-                id="password"
-                class="rounded-md text-black"
-                type="password"
-                name="password"
-                placeholder=Password
-            />
-            <label for="password" class="p-2 focus:bg-sky-400"></label>
-        </div>
-        <button class="p-2 hover:bg-slate-500 text-white rounded-md">Login</button>
-        <button class="p-2 hover:bg-slate-500 text-white rounded-md" formaction="?/register">Register</button>
-    </form>
+<div class="flex justify-center">
+    <div class="flex flex-col items-center w-full">
+        <form class="flex flex-col items-center rounded-xl font-medium gap-4 w-1/2" method="post" action="?/login" use:enhance>
+            <div class="relative w-full">
+                <input
+                    id="username"
+                    class="rounded-md text-black w-full"
+                    name="username"
+                    placeholder=Username
+                />
+                <label for="username" class="focus:bg-sky-400"></label>
+            </div>
+            <div class="relative w-full">
+                <input
+                    id="password"
+                    class="rounded-md text-black w-full"
+                    type="password"
+                    name="password"
+                    placeholder=Password
+                />
+                <label for="password" class="focus:bg-sky-400"></label>
+            </div>
+            <button class="p-2 bg-sky-600 hover:bg-sky-400 text-white rounded-md w-full">Login</button>
+            <button class="p-2 bg-sky-900 hover:bg-sky-400 text-white rounded-md w-full" formaction="?/register">Register</button>
+        </form>
+        <p class="p-8 flex justify-center text-red-500 font-medium text-xl">{form?.message ?? ''}</p>
+    </div>
 </div>
-
-<p class="flex justify-center text-red-500 font-medium text-xl">{form?.message ?? ''}</p>
