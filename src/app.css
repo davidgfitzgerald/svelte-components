@@ -5,6 +5,10 @@
 /* Global CSS styles */
 @layer components {
     body {
-        @apply px-32 bg-slate-800 h-screen text-white overflow-auto
+        @apply bg-slate-800 h-screen text-white overflow-auto
+    }
+    .main-content {
+        height: 100vh;
+        overflow-y: hidden;
     }
 }
