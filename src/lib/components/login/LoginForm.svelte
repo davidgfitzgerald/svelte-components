@@ -6,7 +6,7 @@
 
 <div class="flex h-full">
     <div class="flex flex-col items-center w-full h-full">
-        <form class="flex flex-col items-center rounded-xl font-medium gap-4 min-w-64 h-full" method="post" action="?/login" use:enhance>
+        <form class="flex flex-col items-center rounded-xl font-medium gap-4 min-w-64" method="post" action="?/login" use:enhance>
             <div class="relative w-full">
                 <input
                     id="username"
