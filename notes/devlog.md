@@ -1,3 +1,13 @@
+# Dev Log
+
+Rambling notes during development of thoughts, ideas, problems, solutions, etc.
+
+# Sun 12th Jan
+
+Sat in the Tinto cafe on Gloucester Road in Bristol with a little time to kill so gonna have a little go at the 7 GUIs thing.
+
+So, I didn't have time to get into the meatier 7 GUIs stuff but I did just dockerise the app.
+
 # Tue 7th Jan
 
 Start of this little experimental project.
