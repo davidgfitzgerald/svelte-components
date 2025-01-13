@@ -52,6 +52,7 @@ export const actions = {
 		return redirect(302, '/');
 	},
 	register: async (event) => {
+		console.log("Called register on server")
 		const formData = await event.request.formData();
 		const username = formData.get('username');
 		const password = formData.get('password');
@@ -79,8 +80,10 @@ export const actions = {
 			const session = await auth.createSession(sessionToken, userId);
 			auth.setSessionTokenCookie(event, sessionToken, session.expiresAt);
 		} catch (e) {
+			console.error(e)
 			return fail(500, { message: 'An error has occurred' });
 		}
+		console.log("Redirecting to /")
 		return redirect(302, '/');
 	}
 };
