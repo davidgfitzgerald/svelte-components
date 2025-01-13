@@ -39,17 +39,20 @@ WORKDIR /app
 # Copy dependencies from app_base
 COPY --from=app_base /base/node_modules ./node_modules
 
-# Copy source code
+# Copy required files
+COPY ./drizzle ./drizzle
 COPY ./src ./src
 COPY ./static ./static
-COPY svelte.config.js .
-COPY vite.config.js .
-COPY entry.sh .
 
-# package.json required to run migrations
-COPY ./drizzle ./drizzle
 COPY drizzle.config.js .
-COPY package.json .  
+COPY entry.sh .
+COPY eslint.config.js .
+COPY jsconfig.json .
+COPY package.json .
+COPY postcss.config.js .
+COPY svelte.config.js .
+COPY tailwind.config.js .
+COPY vite.config.js .
 
 # Install PostgreSQL client
 RUN apk add --no-cache postgresql-client
@@ -59,6 +62,8 @@ RUN psql --version
 
 # Build
 # RUN npm run build
+
+RUN npm run check
 
 # Run
 ENTRYPOINT [ "sh", "entry.sh" ]

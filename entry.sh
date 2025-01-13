@@ -7,7 +7,7 @@ PGHOST="${POSTGRES_HOST}"
 PGPORT="${POSTGRES_PORT}"
 PGDATABASE="${POSTGRES_DB}"
 
-export PGPASSWORD # psql uses this environment variable for authentication
+export PGPASSWORD  # psql uses this environment variable for authentication
 
 echo "Attempting to connect to PostgreSQL:"
 echo ""

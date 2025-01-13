@@ -2,6 +2,10 @@
 
 Rambling notes during development of thoughts, ideas, problems, solutions, etc.
 
+# Mon 13th Jan
+
+The app is dockerised but the styling has not been applied. Just working out what else needs to be copied into the docker container.
+
 # Sun 12th Jan
 
 Sat in the Tinto cafe on Gloucester Road in Bristol with a little time to kill so gonna have a little go at the 7 GUIs thing.
