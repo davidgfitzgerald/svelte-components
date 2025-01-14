@@ -1,6 +1,8 @@
 import postgres from 'postgres';
 import 'dotenv/config'
 import { drizzle } from 'drizzle-orm/postgres-js';
+import { sql } from 'drizzle-orm';
+
 
 for (let envVar of [
 	'POSTGRES_USER',
@@ -11,7 +13,7 @@ for (let envVar of [
 	if (!process.env[envVar]) throw new Error(`${envVar} is not set`);
 }
 
-export const client = postgres({
+const client = postgres({
     user: process.env.POSTGRES_USER,
     host: "127.0.0.1",
     database: process.env.POSTGRES_DB,
@@ -20,7 +22,27 @@ export const client = postgres({
     ssl: false,
 });
 
-export const db = drizzle(client);
+const db = drizzle(client);
+
+await db.execute(sql`SET client_min_messages TO WARNING`)
+/**
+ Otherwise we see this logged:
+
+    {
+        severity_local: 'NOTICE',
+        severity: 'NOTICE',
+        code: '00000',
+        message: 'truncate cascades to table "session"',
+        file: 'tablecmds.c',
+        line: '1958',
+        routine: 'ExecuteTruncateGuts'
+    }
+ */
+
+export { 
+    client,
+    db,
+};
 
 
 
