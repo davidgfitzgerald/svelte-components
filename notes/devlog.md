@@ -2,6 +2,10 @@
 
 Rambling notes during development of thoughts, ideas, problems, solutions, etc.
 
+# Tue 14th Jan
+
+On lunch quickly refactoring out the floating label input into its own component.
+
 # Mon 13th Jan
 
 The app is dockerised but the styling has not been applied. Just working out what else needs to be copied into the docker container.
