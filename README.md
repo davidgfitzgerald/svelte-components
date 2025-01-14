@@ -4,8 +4,23 @@ Experimental Svelte Components
 
 # Quick Start
 
+1. Set up `.env`
+
 ```bash
-docker compose up --force-recreate --build
+cp .env.example .env
+```
+
+
+2. Start docker containers
+
+```bash
+docker compose up --force-recreate --build -V
+```
+
+3. Browse to `http://localhost:5173`
+
+```bash
+chrome http://localhost:5173
 ```
 
 # create-svelte

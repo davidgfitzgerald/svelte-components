@@ -75,6 +75,7 @@ export const actions = {
 
 		try {
 			await db.insert(table.user).values({ id: userId, username, passwordHash });
+			console.log(`Registered new user: ${username}`)
 
 			const sessionToken = auth.generateSessionToken();
 			const session = await auth.createSession(sessionToken, userId);

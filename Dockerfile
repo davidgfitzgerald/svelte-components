@@ -63,6 +63,7 @@ RUN psql --version
 # Build
 # RUN npm run build
 
+# Prevents warning of missing .svelte-kit/ dir
 RUN npm run check
 
 # Run
